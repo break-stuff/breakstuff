@@ -1,0 +1,49 @@
+@import '../00_Abstracts/index';
+
+.navbar {
+    .header & {
+        background-color: color(primary);
+        color: text-color(primary);
+
+        .navbar-brand {
+            @include ml(lg);
+            @include py(lg);
+
+            a {
+                color: white;
+                font-family: $font-family-monospace;
+            }
+        }
+
+        .navbar-toggler {
+            color: white;
+            border-color: white;
+            @include mr(lg);
+
+            .navbar-toggler-icon {
+                color: white;
+            }
+        }
+
+        .nav-link {
+            color: white;
+            @include p(0);
+            @include mx(lg);
+            @include my(xl);
+            @include transition-ease-in-out(fast);
+
+            @include hover-focus {
+                font-weight: bold;
+                color: white;
+            }
+
+            &.active {
+                border-bottom: solid 2px white;
+
+                @include breakpoint-below(sm) {
+                    @include mr(auto);
+                }
+            }
+        }
+    }
+}

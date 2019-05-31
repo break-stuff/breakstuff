@@ -1,0 +1,25 @@
+@import '../00_Abstracts/index';
+
+pre,
+code {
+    background-color: white;
+
+    &.prettyprinted {
+        @include p(lg);
+
+        .atv,
+        .str,
+        .lit {
+            color: color(primary, dark);
+        }
+
+        .tag,
+        .pln {
+            color: color(secondary);
+        }
+
+        .atn {
+            color: color(success, dark);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '../00_Abstracts/index';
+
+footer {
+    width: 100%;
+    @include px(xl);
+
+    &.page-footer {
+        background-color: color(dark);
+        color: white;
+
+        .footer-copyright {
+            display: flex;
+            align-items: center;
+            
+            a {
+                color: white;
+                @include font-size(lg);
+                @include ml(md);
+            }
+        }
+    }
+}

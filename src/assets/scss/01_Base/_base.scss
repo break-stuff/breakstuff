@@ -1,0 +1,46 @@
+@import '../00_Abstracts/index';
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    body {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        // background: repeating-linear-gradient(45deg,
+        //         color(light),
+        //         color(light) 4px,
+        //         color(light, lighter) 4px,
+        //         color(light, lighter) 8px);
+        background-color: color(secondary, darker);
+        margin: 0;
+        padding: 0;
+
+        #app {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }        
+
+        .content-wrapper {
+            background-color: color(light, lighter);
+            flex: 1 0 auto;
+            max-width: 950px;
+            width: 90vw;
+            margin: 0 auto;        
+            @include p(xl);
+
+            @include breakpoint-below(sm) {
+                width: 100%;
+            }
+        }
+
+        code,
+        pre {
+            font-family: $font-family-monospace;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"paths": {
+		"styles": "./src/assets"
+	},
+	"format": {
+		"styles": "scss"
+	},
+	"addToManifest": true,
+	"importAbstracts": true
+}

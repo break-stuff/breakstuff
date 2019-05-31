@@ -1,0 +1,97 @@
+//   FONTS
+
+$font-accent: 'IBM Plex Sans', sans-serif;
+$font-family-base: 'Open Sans', sans-serif;
+$font-family-monospace: 'IBM Plex Mono', monospace;
+
+$font-size-base: 1rem;
+$font-sizes: (
+    xxs: 0.75rem,
+    xs: 0.875rem,
+    sm: 1rem,
+    md: 1.25rem,
+    lg: 1.5rem,
+    xl: 2rem,
+    xxl: 3rem
+) !default;
+
+$line-height-base: 1.5;
+
+// SPACING
+
+$spacing-sizes: (
+    auto: auto,
+    0: 0,
+    xxs: 0.125rem,
+    xs: 0.25rem,
+    sm: 0.5rem,
+    md: 0.75rem,
+    lg: 1rem,
+    xl: 1.25rem,
+    xxl: 2rem
+) !default;
+
+
+// COLORS
+
+$theme-colors: (
+    'primary': #C23924,
+    'secondary': #2a578f,
+    'success': #4a8400,
+    'info': #207cb9,
+    'warning': #ffbf00,
+    'danger': #d00000,
+    'light': #c7c7c7,
+    'dark': #494949
+) !default;
+
+$color-variation: 8%;
+
+
+// BREAKPOINTS
+
+$breakpoints: (
+    xs: 480px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+    xl: 1440px
+) !default;
+
+
+// Z-INDEX
+
+$z-indexes: (
+    sub: -1,
+    none: 0,
+    xxs: 1,
+    xs: 10,
+    sm: 50,
+    md: 100,
+    lg: 200,
+    xl: 500,
+    trump: 99999
+) !default;
+
+
+// BORDERS
+
+$border-radiuses: (
+    none: 0,
+    sm: 0.25rem,
+    md: 0.5rem,
+    lg: 0.75rem,
+    pill: 10rem,
+    circle: 50%
+) !default;
+
+$border-radius: 0;
+
+//  TRANSITIONS
+
+$transitions: (
+    slow: .5s,
+    med: .3s,
+    fast: .1s
+) !default;
+                
