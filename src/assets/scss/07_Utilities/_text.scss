@@ -1,0 +1,9 @@
+@import '../00_Abstracts/index';
+
+.sentence-case {
+    text-transform: lowercase;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}

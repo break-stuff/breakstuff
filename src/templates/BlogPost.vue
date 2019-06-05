@@ -7,22 +7,12 @@
             :alt="$page.post.imageAlt"
         />
         <div class="blogPost">
-            <h1 v-html="$page.post.title" class="mb-4"/>
+            <h1 v-html="$page.post.title" class=""/>
+
             <div class="meta">
-                <div class="box author">
-                    <span class="label">Author</span>
-                    <span class="author-name" v-text="$page.post.author"/>
-                </div>
-                <div class="box date">
-                    <span class="label">Date</span>
-                    <div v-text="new Date($page.post.date).toLocaleDateString()"/>
-                </div>
-                <div class="box time">
-                    <span class="label">Time</span>
-                    <span>{{ $page.post.timeToRead }} min read</span>
-                </div>
+                <span class="label">by {{$page.post.author}} on {{formattedBlogDate}}</span>
             </div>
-            <BlogContent class="mt-5" :content="$page.post.content"/>
+            <BlogContent class="mt-4" :content="$page.post.content"/>
         </div>
     </Layout>
 </template>
@@ -48,6 +38,16 @@ export default {
     components: {
         BlogContent
     },
+    computed: {
+        formattedBlogDate() {
+            return new Date(this.$page.post.date).toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+        }
+    },
     metaInfo() {
         return {
             title: this.$page.post.title
@@ -59,16 +59,8 @@ export default {
 <style lang="scss" scoped>
 .meta {
     display: flex;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px 0 0;
-
-    .label {
-        font-weight: bold;
-    }
+    margin-top: -1rem;
+    font-style: italic;
 }
 
 .blogImage {

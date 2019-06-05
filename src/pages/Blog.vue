@@ -3,10 +3,10 @@
         <h1 class="my-4 mb-5">Blog</h1>
 
         <g-link
-            :to="item.node.path"
+            class="blog-post"
             v-for="item in $page.posts.edges"
             :key="item.node.id"
-            class="blog-post"
+            :to="item.node.path"
         >
             <div class="media my-5">
                 <g-image immediate :src="item.node.image" class="mr-3" :alt="item.node.imageAlt"/>
@@ -21,7 +21,7 @@
 
 <page-query>
 query Blog {
-	posts: allBlogPost(sortBy: "date") {
+	posts: allBlogPost(sortBy: "date", order: ASC ) {
     edges {
       node {
         id
